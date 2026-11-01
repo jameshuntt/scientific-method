@@ -1,0 +1,20 @@
+[package]
+name = "scientific-method"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.89"
+authors = ["James Hunt <james@1o.business>"]
+license = "MIT OR Apache-2.0"
+description = "The parts of the scientific method used to define and evaluate experiments."
+repository = "https://github.com/jameshuntt/scientific-method"
+readme = "README.md"
+keywords = ["science", "experiments", "hypothesis", "measurement"]
+categories = ["science"]
+include = ["src/**", "Cargo.toml", "LICENSE*", "README*", "CHANGELOG*"]
+
+[features]
+default = []
+serde = ["dep:serde"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"], optional = true }
