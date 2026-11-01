@@ -1,12 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 cd "$(dirname "$0")"
-
-cargo fmt --check
-cargo test
+cargo fmt --all
 cargo test --all-features
-cargo clippy --all-targets --all-features
+cargo clippy --all-targets --all-features -- -D warnings
 cargo package --allow-dirty
-
-echo
-echo "scientific-method 0.1.0 verified"
+printf '\nscientific-method 0.2.0 verified\n'

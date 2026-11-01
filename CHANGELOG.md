@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.0 (2026-11-01)
+
+- Renames scientific outcomes to `supported`, `not_supported`, and `inconclusive`.
+- Separates scientific interpretation from a later candidate acceptance or promotion decision.
+
 ## 0.1.0 (2026-11-01)
 
 - Adds the scientific-method domain model.

@@ -1,12 +1,15 @@
 // Copyright © 2026 James Hunt. All rights reserved.
 
-/// The terminal interpretation of an experiment.
+/// The terminal scientific interpretation of an experiment.
+///
+/// This is intentionally distinct from any later implementation decision such as
+/// accepting, promoting, or retaining a candidate.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 #[cfg_attr(feature = "serde", serde(rename_all = "snake_case"))]
 pub enum Outcome {
-    Accepted,
-    Rejected,
+    Supported,
+    NotSupported,
     Inconclusive,
 }
 

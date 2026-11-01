@@ -80,9 +80,9 @@ impl ScientificMethod {
             .collect::<Result<Vec<_>, _>>()?;
 
         let outcome = if criteria.iter().all(|result| result.passed) {
-            Outcome::Accepted
+            Outcome::Supported
         } else {
-            Outcome::Rejected
+            Outcome::NotSupported
         };
 
         Ok(MethodEvaluation {
@@ -144,7 +144,7 @@ mod tests {
 
         assert_eq!(
             method.evaluate(&observations).unwrap().conclusion.outcome,
-            Outcome::Rejected
+            Outcome::NotSupported
         );
     }
 }

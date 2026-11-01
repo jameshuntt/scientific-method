@@ -4,7 +4,7 @@ The parts of the scientific method used to define and evaluate experiments.
 
 `scientific-method` models questions, hypotheses, predictions, independent and dependent variables, controls, observations, measurements, criteria, and conclusions. It does not run experiments or know about repositories, commands, files, or benchmarks.
 
-Criteria are machine-evaluable and can be composed. A method evaluates its declared criteria against observations and concludes `accepted`, `rejected`, or `inconclusive`.
+Criteria are machine-evaluable and can be composed. A method evaluates its declared criteria against observations and concludes `supported`, `not_supported`, or `inconclusive`. That scientific conclusion is intentionally separate from any later decision to accept, promote, or retain an implementation.
 
 ```rust
 use scientific_method::{
@@ -34,7 +34,7 @@ assert!(evaluation.criteria[0].passed);
 Serialization is optional:
 
 ```toml
-scientific-method = { version = "0.1", features = ["serde"] }
+scientific-method = { version = "0.2", features = ["serde"] }
 ```
 
 The crate keeps serialization separate from execution so experiment frameworks can choose their own file formats and storage.
